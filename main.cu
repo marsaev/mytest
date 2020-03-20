@@ -75,7 +75,12 @@ int main(void)
   }  
 
   // Cleanup
-  //free(a_h); cudaFree(a_d);
+  free(in_h);
+  free(mul_h);
+  free(out_h);
+  cudaFree(in_d);
+  cudaFree(out_d);
+  cudaFree(mul_d);
 
   return 0;
 }
